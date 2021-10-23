@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <style>
+      * {
+        font-family: cursive;
+      }
+      body {
+        background-color: #eaa;
+      }
+      h1 {
+        font-size: 50px;
+        color: aliceblue;
+        text-shadow: 2px 2px 2px #000;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .center {
+        text-align: center;
+      }
+      .p1 {
+        color: #0f9d58;
+        text-shadow: 2px 2px 2px #000;
+      }
+      .p2 {
+        color: #4285f4;
+        text-shadow: 2px 2px 2px #000;
+      }
+      .draw {
+        color: red;
+        font-size: 300%;
+      }
+      p {
+        text-shadow: 2px 2px 2px #fff;
+      }
+      .p {
+        float: left;
+        padding-left: 24%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Dice Game</h1>
+      <h2 class="p1"></h2>
+      <h2 class="p2"></h2>
+      <h2 class="draw"></h2>
+      <h3>Refresh for new Winner</h3>
+    </div>
+    <div class="pl">
+      <span class="p p1">
+        <h2 class="center">Player 1</h2>
+        <img src="img/1.png" alt="" height="200em" />
+      </span>
+      <span class="p p2">
+        <h2 class="center">Player 2</h2>
+        <img src="img/2.png" alt="" height="200em" />
+      </span>
+    </div>
+    <script>
+      var num1 = Math.floor(Math.random() * 6) + 1;
+      var rannum1 = "img/" + num1 + ".png";
+      var num2 = Math.floor(Math.random() * 6) + 1;
+      var rannum2 = "img/" + num2 + ".png";
+      var img1 = document.querySelectorAll("img")[0];
+      img1.setAttribute("src", rannum1);
+      var img2 = document.querySelectorAll("img")[1];
+      img2.setAttribute("src", rannum2);
+      if (rannum1 > rannum2) {
+        document.querySelector(".p1").innerHTML = "Player 1 Won";
+      } else if (rannum1 < rannum2) {
+        document.querySelector(".p2").innerHTML = "Player 2 Won";
+      } else {
+        document.querySelector(".draw").innerHTML = "Its Draw";
+      }
+    </script>
+  </body>
+</html>
