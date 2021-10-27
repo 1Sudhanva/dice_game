@@ -1,0 +1,34 @@
+* {
+  font-family: cursive;
+}
+body {
+  background-color: #eaa;
+}
+h1 {
+  font-size: 50px;
+  color: aliceblue;
+  text-shadow: 2px 2px 2px #000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.center {
+  text-align: center;
+}
+.p1 {
+  color: #0f9d58;
+  text-shadow: 2px 2px 2px #000;
+}
+.p2 {
+  color: #4285f4;
+  text-shadow: 2px 2px 2px #000;
+}
+.draw {
+  color: red;
+  font-size: 300%;
+}
+h3 {
+  text-shadow: 2px 2px 2px #fff;
+}
+.p {
+  float: left;
+  padding-left: 24%;
+}
